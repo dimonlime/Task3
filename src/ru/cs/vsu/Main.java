@@ -3,47 +3,25 @@ package ru.cs.vsu;
 public class Main {
 
     public static void main(String[] args) {
-        Queue queue = new Queue();
-        queue.add(1);
-        queue.add(2);
-        queue.add(3);
-        queue.add(4);
-        for (int i = 0; i < queue.getSize(); i++) {
-            System.out.print(queue.get(i) + " ");
-        }
+        MyQueue myQueue = new MyQueue();
+        myQueue.add(1);
+        myQueue.add(2);
+        myQueue.add(3);
+        myQueue.add(4);
+        myQueue.remove();
+        myQueue.display();
+
+        System.out.println();
+
+        SimpleQueue sq = new SimpleQueue();
+        sq.add(1);
+        sq.add(2);
+        sq.add(3);
+        sq.remove();
+        sq.add(4);
+        sq.add(5);
+        sq.remove();
+        sq.add(6);
+        sq.display();
     }
-}
-
-class Queue {
-    LinkedListStack<Integer> list1 = new LinkedListStack<>();
-    LinkedListStack<Integer> list2 = new LinkedListStack<>();
-
-    public void add(int value){
-        list1.push(value);
-    }
-
-    public void remove() {
-        if(getSize() == 0) {
-            System.out.println("Empty");
-        } else {
-            int size = list1.getSize();
-            for (int i = 0; i < size; i++) {
-                list2.push(list1.pop());
-            }
-            list2.pop();
-            size = list2.getSize();
-            for (int i = 0; i < size; i++) {
-                list1.push(list2.pop());
-            }
-        }
-    }
-
-    public int getSize(){
-        return list1.getSize();
-    }
-
-    public int get(int value){
-        return list1.get(value);
-    }
-
 }

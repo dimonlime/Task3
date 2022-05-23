@@ -63,4 +63,14 @@ public class LinkedListStack<Integer> {
         }
         return curr;
     }
+
+    public boolean isEmpty() {
+        boolean isEmpty;
+        if(size == 0) {
+            isEmpty = true;
+        } else {
+            isEmpty = false;
+        }
+        return isEmpty;
+    }
 }
