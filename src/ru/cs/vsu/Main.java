@@ -5,10 +5,11 @@ public class Main {
     public static void main(String[] args) {
         MyQueue myQueue = new MyQueue();
         myQueue.add(1);
+        myQueue.remove();
         myQueue.add(2);
         myQueue.add(3);
-        myQueue.add(4);
         myQueue.remove();
+        myQueue.add(4);
         myQueue.display();
 
         System.out.println();
@@ -22,6 +23,7 @@ public class Main {
         sq.add(5);
         sq.remove();
         sq.add(6);
+        sq.remove();
         sq.display();
     }
 }

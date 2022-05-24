@@ -28,7 +28,7 @@ public class SimpleQueue {
                 System.out.print(stack1.get(i) + " ");
             }
         } else {
-            for(int i = 0; i < stack2.size(); i++) {
+            for(int i = stack2.size() - 1; i >= 0; i--) {
                 System.out.print(stack2.get(i) + " ");
             }
             for (int i = 0; i < stack1.size(); i++) {

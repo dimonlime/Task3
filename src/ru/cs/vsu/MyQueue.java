@@ -24,17 +24,13 @@ public class MyQueue {
         return list1.getSize();
     }
 
-    public int get(int value){
-        return list1.get(value);
-    }
-
     public void display() {
         if (list2.isEmpty()) {
             for (int i = 0; i < list1.getSize(); i++) {
                 System.out.print(list1.get(i) + " ");
             }
         } else {
-            for(int i = 0; i < list2.getSize(); i++) {
+            for(int i = list2.getSize() - 1; i >= 0; i--) {
                 System.out.print(list2.get(i) + " ");
             }
             for (int i = 0; i < list1.getSize(); i++) {
